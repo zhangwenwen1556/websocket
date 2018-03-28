@@ -1,0 +1,91 @@
+
+*.iml
+.idea/
+*/target/*
+common/common-api/target/
+common/common-service/target/
+core/target/
+user/user-api/target/
+user/user-service/target/
+consultation/consultation-api/target/
+consultation/consultation-service/target/
+common/common-api/target/
+common/common-service/target/
+core/src/main/resources/
+disconf/download/
+guaHao/guaHao-api/target/
+guaHao/guaHao-service/target/
+operation/operation-api/target/
+operation/operation-service/target/
+im/im-api/target/
+im/im-service/target/
+pay/pay-api/target/
+pay/pay-service/target/
+logs/im/
+shop/shop-api/target/
+shop/shop-service/target/
+common/common-service/dependency-reduced-pom.xml
+disconf/fuyoujiankang_shop/application-core.properties
+logs/common/business.common.2017-01-05.log
+logs/common/business.common.2017-01-09.log
+logs/common/business.common.2017-01-10.log
+logs/guaHao/
+logs/shop/
+logs/user/business.user.2017-01-05.log
+logs/user/business.user.2017-01-09.log
+logs/user/business.user.2017-01-10.log
+user/user-service/dependency-reduced-pom.xml
+logs/common/business.common.2017-01-11.log
+logs/user/business.user.2017-01-11.log
+logs/operation
+scheduler/target/
+mq/mq-bean/target/
+disconf/fuyoujiankang_guaHao/application-core.properties
+disconf/fuyoujiankang_guaHao/application-core.properties.lock
+disconf/fuyoujiankang_mq/application-core.properties
+disconf/fuyoujiankang_mq/application-core.properties.lock
+disconf/fuyoujiankang_pay/application-core.properties
+disconf/fuyoujiankang_pay/application-core.properties.lock
+disconf/fuyoujiankang_shop/application-core.properties.lock
+disconf/fuyoujiankang_user/application-core.properties
+disconf/fuyoujiankang_user/application-core.properties.lock
+mq/mq-consumer/target/classes/META-INF/spring/applicationContext-consumer.xml
+mq/mq-consumer/target/classes/META-INF/spring/applicationContext-email.xml
+mq/mq-consumer/target/classes/META-INF/spring/applicationContext-mongo.xml
+mq/mq-consumer/target/classes/META-INF/spring/applicationContext-mq.xml
+mq/mq-consumer/target/classes/META-INF/spring/applicationContext.xml
+mq/mq-consumer/target/classes/application-core.properties
+mq/mq-consumer/target/classes/application-core.properties.lock
+mq/mq-consumer/target/classes/application-dubbo.properties
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/base/StartMq.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/base/SystemInitConfig.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/base/command/ConcurrentlyCommand.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/base/command/OrderlyCommand.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/base/consumer/EkuMQPushConsumer$1.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/base/consumer/EkuMQPushConsumer.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/command/demo/DemoCommand.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/command/healthInquiry/CloseHealthInquiryCommand.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/command/healthRecord/ResidentPointRecordCommand.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/command/im/SessionCreateCommand.class
+mq/mq-consumer/target/classes/com/fuyoujiankang/mq/command/mail/MailSendCommand.class
+mq/mq-consumer/target/classes/disconf.properties
+mq/mq-consumer/target/classes/logback.xml
+.class
+*.class
+support/support-service/target/classes/*
+support/support-service/target/
+将删除 disconf/
+将删除 dw/dw-scheduler/target/
+将删除 jss.js
+将删除 logs/
+将删除 monitor/monitor-track/target/
+将删除 mq/mq-consumer/target/
+将删除 operation/operation-service/disconf/
+将删除 operation/operation-service/logs/
+将删除 orderCenter/orderCenter-api/target/
+将删除 orderCenter/orderCenter-service/src/main/resources/application-core.properties
+将删除 orderCenter/orderCenter-service/src/main/resources/application-dubbo.properties
+将删除 orderCenter/orderCenter-service/target/
+将删除 shop/shop-service/disconf/
+将删除 shop/shop-service/logs/
+将删除 testImport.html

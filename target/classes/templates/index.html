@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>聊天室</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .message {
+            width: 60%;
+            margin: 0 10px;
+            display: inline-block;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid #B3D33F;
+        }
+
+        .form {
+            width: 100%;
+            position: fixed;
+            bottom: 300px;
+            left: 0;
+        }
+
+        .connect {
+            height: 40px;
+            vertical-align: top;
+            /* padding: 0; */
+            width: 80px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #B3D33F;
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <ul id="content"></ul>
+    <input type="hidden" id="name" value=""/>
+    <input type="hidden" id="name1" value=""/>
+    <div id="nameOnclink">
+        自己角色：<input class="nameOnclink" type="button" name="zhangsan" value="zhangsan"/>
+        <input class="nameOnclink" type="button" name="zhaoqiang" value="zhaoqiang"/>
+        <input class="nameOnclink" type="button" name="xiaofeifei" value="xiaofeifei"/>
+        <input class="nameOnclink" type="button" name="zhouhu" value="zhouhu"/>
+    </div>
+    <div id="nameOnclink1" style="display: none;">
+        与谁创建房间：<input class="nameOnclink1" type="button" name="zhangsan" value="zhangsan"/>
+        <input class="nameOnclink1" type="button" name="zhaoqiang" value="zhaoqiang"/>
+        <input class="nameOnclink1" type="button" name="xiaofeifei" value="xiaofeifei"/>
+        <input class="nameOnclink1" type="button" name="zhouhu" value="zhouhu"/>
+    </div>
+<form class="form" id="formInfo" style="display: none;">
+    <input type="text" placeholder="请输入发送的消息" class="message" id="message" />
+    <input type="button" value="发送" id="send" class="connect" /> <input
+        type="button" value="连接" id="connect" class="connect" />
+</form>
+<script type="text/javascript">
+    var oUl = document.getElementById('content');
+    var oConnect = document.getElementById('connect');
+    var oSend = document.getElementById('send');
+    var oInput = document.getElementById('message');
+    var ws = null;
+    oConnect.onclick = function() {
+        if ('WebSocket' in window) {
+            var nameMyself = $("#name").val();
+            var nameOther = $("#name1").val();
+            ws = new WebSocket("ws://127.0.0.1:8080/websocket/"+nameMyself+"/"+nameOther);
+        } else {
+            alert('Not support websocket')
+        }
+        ws.onopen = function() {
+            oUl.innerHTML += "<li>客户端已连接</li>";
+        }
+        ws.onmessage = function(evt) {
+            oUl.innerHTML += "<li>" + evt.data + "</li>";
+        }
+        ws.onclose = function() {
+            oUl.innerHTML += "<li>客户端已断开连接</li>";
+        };
+        ws.onerror = function(evt) {
+            oUl.innerHTML += "<li>" + evt.data + "</li>";
+
+        };
+    };
+    oSend.onclick = function() {
+        if (ws) {
+            ws.send(oInput.value);
+        }
+    }
+
+    $(".nameOnclink").click(function(){
+        $("#name").val($(this).val());
+        $("#nameOnclink").css("display", "none");
+        $("#nameOnclink1").css("display", "block");
+        // alert($(this).val());
+    });
+    $(".nameOnclink1").click(function () {
+        $("#name1").val($(this).val());
+        $("#nameOnclink1").css("display", "none");
+        $("#formInfo").css("display", "block");
+    });
+</script>
+</body>
+</html>
