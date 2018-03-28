@@ -73,7 +73,7 @@
         if ('WebSocket' in window) {
             var nameMyself = $("#name").val();
             var nameOther = $("#name1").val();
-            ws = new WebSocket("ws://127.0.0.1:8080/websocket/"+nameMyself+"/"+nameOther);
+            ws = new WebSocket("ws://127.0.0.1:8000/websocket/"+nameMyself+"/"+nameOther);
         } else {
             alert('Not support websocket')
         }
