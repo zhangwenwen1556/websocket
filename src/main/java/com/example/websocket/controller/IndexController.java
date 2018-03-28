@@ -3,13 +3,11 @@ package com.example.websocket.controller;
 import com.example.websocket.context.SystemContextHolder;
 import com.example.websocket.entity.User;
 import com.example.websocket.service.UserService;
-import com.sun.org.glassfish.gmbal.ParameterNames;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
