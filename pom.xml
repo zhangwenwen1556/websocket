@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>websocket</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version></version>
 	<packaging>jar</packaging>
 
 	<name>websocket</name>
